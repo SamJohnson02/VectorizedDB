@@ -6,6 +6,11 @@ import numpy as np
 from typing import List, Dict
 
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()  # loads .env file automatically
+
+GOOGLE_FOLDER_ID = os.getenv("GOOGLE_FOLDER_ID")
 
 EMBED_MODEL = "text-embedding-3-large"
 EMBED_FILE = "gdocs_embeddings.jsonl"
